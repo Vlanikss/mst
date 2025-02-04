@@ -13,10 +13,10 @@ body {
 .container_intro {
     display: flex;
     height: 100vh;
-    flex-wrap: wrap; /* Добавлено для адаптивности */
+    flex-wrap: wrap; 
 }
 
-/* Левая часть (контент) */
+
 .left-content {
     width: 50%;
     background-color: #242222;
@@ -26,7 +26,7 @@ body {
     padding: 50px;
 }
 
-/* Хедер */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,7 @@ body {
     color: white;
 }
 
-/* Текстовая часть */
+
 .hero-text {
     margin-top: 130px;
 }
@@ -123,7 +123,7 @@ body {
     background: #ddd;
 }
 
-/* Правая часть (изображение) */
+
 .right-image {
     width: 45%;
     height: 100vh;
@@ -454,17 +454,17 @@ form input {
     }
 }
 
-/* Адаптивные стили для экрана шириной менее 768px */
+
 @media (max-width: 768px) {
     *{
         overflow-x: hidden;
     }
     .container_intro {
-        flex-direction: column; /* Контент будет располагаться один под другим */
+        flex-direction: column; 
     }
 
     .left-content, .right-image {
-        width: 100%; /* Разделим контейнеры на полную ширину экрана */
+        width: 100%; 
         margin-left: 0;
         padding: 20px;
     }
@@ -475,31 +475,31 @@ form input {
     }
 
     .hero-text h2 {
-        font-size: 40px; /* Уменьшаем размер шрифта для мобильных */
+        font-size: 40px; 
         width: 100%;
     }
 
     .features p {
-        width: 100%; /* Ширина элементов теперь будет на 100% */
+        width: 100%; 
     }
 
     .form-container {
-        flex-direction: column; /* Колонки будут располагаться по вертикали */
+        flex-direction: column;
         width: 100%;
         margin-left: 0;
     }
 
     .form-image img {
-        width: 80%; /* Уменьшаем размер картинки */
+        width: 80%; 
     }
 
     .container_down {
-        flex-direction: column; /* Ссылки будут располагаться по вертикали */
+        flex-direction: column; 
         gap: 10px;
     }
 
     .footer {
-        flex-direction: column; /* Размещаем футер по вертикали */
+        flex-direction: column;
         align-items: flex-start;
         padding: 10px;
     }
@@ -509,22 +509,22 @@ form input {
     }
 }
 
-/* Для очень маленьких экранов (например, смартфонов в портретной ориентации) */
+/
 @media (max-width: 480px) {
     *{
         overflow-x: hidden;
     }
     .hero-text h2 {
-        font-size: 30px; /* Уменьшаем текст еще больше */
+        font-size: 30px; 
     }
 
     .features p {
-        font-size: 18px; /* Уменьшаем размер текста */
+        font-size: 18px; 
     }
 
     .order-btn, .order-btn_info {
         padding: 14px 20px;
-        font-size: 14px; /* Уменьшаем размер кнопок */
+        font-size: 14px; 
     }
 
     .footer {

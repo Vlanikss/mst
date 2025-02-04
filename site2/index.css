@@ -17,7 +17,7 @@ body {
     padding: 10px;
 }
 
-/* Контейнер с текстом */
+
 .container {
     position: relative;
     display: flex;
@@ -27,7 +27,6 @@ body {
     gap: 10px;
 }
 
-/* Общий контейнер для видео */
 .video-container {
     position: fixed;
     top: 0;
@@ -39,7 +38,7 @@ body {
     pointer-events: none;
 }
 
-/* Само видео */
+
 .video-container video {
     width: 150%;
     height: 150%;
@@ -49,7 +48,7 @@ body {
     left: -25%;
 }
 
-/* Маски для видео */
+
 .video-mask {
     position: relative;
     display: inline-block;
@@ -58,22 +57,21 @@ body {
     vertical-align: middle;
 }
 
-/* Прямоугольники адаптивные */
 .video-mask {
-    width: 15vw; /* 15% от ширины экрана */
-    height: 5vw;  /* 5% от ширины экрана */
-    min-width: 80px;  /* Минимальный размер */
+    width: 15vw;
+    height: 5vw;  
+    min-width: 80px;  
     min-height: 40px;
-    max-width: 300px; /* Ограничение по максимальному размеру */
+    max-width: 300px;
     max-height: 100px;
 }
 
-/* Адаптивный текст */
+
 .word {
-    font-size: clamp(20px, 5vw, 60px); /* От 20px до 60px в зависимости от экрана */
+    font-size: clamp(20px, 5vw, 60px);
 }
 
-/* Позиционируем фоновое видео внутри маски */
+
 .video-mask::after {
     content: "";
     position: absolute;
@@ -86,7 +84,7 @@ body {
     mix-blend-mode: screen;
 }
 
-/* Медиазапросы для адаптива */
+
 @media (max-width: 768px) {
     body {
         font-size: 24px;
