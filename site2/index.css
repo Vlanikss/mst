@@ -15,6 +15,7 @@ body {
     text-align: center;
     font-weight: bold;
     padding: 10px;
+    overflow: hidden;
 }
 
 
@@ -24,73 +25,36 @@ body {
     flex-wrap: wrap;
     max-width: 90%;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-.video-container {
+
+.word {
+    font-size: clamp(30px, 6vw, 80px);
+}
+
+
+#background-video {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-    pointer-events: none;
+    object-fit: cover;
+    visibility: hidden;
 }
-
-
-.video-container video {
-    width: 150%;
-    height: 150%;
-    object-fit: contain;
-    position: absolute;
-    top: -25%;
-    left: -25%;
-}
-
 
 .video-mask {
     position: relative;
-    display: inline-block;
+    width: 150px;
+    height: 50px;
     overflow: hidden;
-    background: black;
-    vertical-align: middle;
-}
-
-.video-mask {
-    width: 15vw;
-    height: 5vw;  
-    min-width: 80px;  
-    min-height: 40px;
-    max-width: 300px;
-    max-height: 100px;
 }
 
 
-.word {
-    font-size: clamp(20px, 5vw, 60px);
-}
-
-
-.video-mask::after {
-    content: "";
+.video-mask video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('./img/video.mp4');
-    background-size: cover;
-    mix-blend-mode: screen;
-}
-
-
-@media (max-width: 768px) {
-    body {
-        font-size: 24px;
-    }
-    .video-mask {
-        width: 20vw;
-        height: 8vw;
-    }
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
