@@ -1,16 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Column from '../column/column';
 import styles from './Board.module.css';
 
-const Board = () => {
-    const initialData = [
-        { title: 'Backlog', tasks: [{ id: '1', name: 'Task 1', description: 'Description 1' }, { id: '2', name: 'Task 2', description: 'Description 2' }] },
-        { title: 'Ready', tasks: [] },
-        { title: 'In Progress', tasks: [] },
-        { title: 'Finished', tasks: [] },
-    ];
+const LOCAL_STORAGE_KEY = "kanbanData";
 
-    const [data, setData] = useState(initialData);
+const Board = () => {
+    
+    const loadDataFromLocalStorage = () => {
+        const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+        try {
+            return savedData ? JSON.parse(savedData) : [
+                { title: 'Backlog', tasks: [] },
+                { title: 'Ready', tasks: [] },
+                { title: 'In Progress', tasks: [] },
+                { title: 'Finished', tasks: [] },
+            ];
+        } catch (error) {
+            console.error("Не удалось загрузить данные из localStorage:", error);
+            return [
+                { title: 'Backlog', tasks: [] },
+                { title: 'Ready', tasks: [] },
+                { title: 'In Progress', tasks: [] },
+                { title: 'Finished', tasks: [] },
+            ];
+        }
+    };
+
+    const [data, setData] = useState(loadDataFromLocalStorage);
+
+  
+    useEffect(() => {
+        console.log('Сохраняем данные в localStorage:', data);
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
+    }, [data]); 
 
     const addTask = (newTaskName) => {
         setData(prevData => {

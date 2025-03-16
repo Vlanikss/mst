@@ -31,16 +31,16 @@ const Column = ({ title, tasks, previousTasks, onAddTask, onMoveTask }) => {
                 ))}
             </ul>
 
-            {/* Добавление задачи (только для Backlog) */}
+            {}
             {title === 'Backlog' && (
                 isAdding ? (
                     <div>
-                        <input
+                        <input className={styles.chooseTask} 
                             type="text"
                             value={newTaskName}
                             onChange={(e) => setNewTaskName(e.target.value)}
                         />
-                        <button className={styles.submitButton} onClick={handleAddTask}>
+                        <button className={styles.submitButton1} onClick={handleAddTask}>
                             Submit
                         </button>
                     </div>
@@ -57,7 +57,7 @@ const Column = ({ title, tasks, previousTasks, onAddTask, onMoveTask }) => {
             {}
             {previousTasks?.length > 0 && (
                 <div>
-                    <select value={selectedTask} onChange={(e) => setSelectedTask(e.target.value)}>
+                    <select className={styles.chooseTask}  value={selectedTask} onChange={(e) => setSelectedTask(e.target.value)}>
                         <option value="default">Choose a task</option>
                         {previousTasks.map(task => (
                             <option key={task.id} value={task.id}>

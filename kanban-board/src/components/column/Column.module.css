@@ -8,8 +8,9 @@
 }
 
 .columnTitle {
-    font-weight: bold;
+    font-weight: 400;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .taskList {
@@ -18,24 +19,44 @@
 }
 
 .addCardButton {
-    background-color: #0066cc;
-    color: white;
+    background-color: transparent;
+    color: gray;
     border: none;
     padding: 5px 10px;
     margin-top: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .addCardButton:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+    
 }
 
 .submitButton {
-    background-color: #0066cc;
+    background-color: transparent;
+    color: gray;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.chooseTask{
+
+   border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.submitButton1{
+
+    background-color:  rgba(0, 103, 163, 1);
     color: white;
     border: none;
     padding: 5px 10px;
-    margin-left: 10px;
+    margin-top: 10px;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
 }

@@ -13,7 +13,7 @@ const Header = () => {
             <h1>Awesome Kanban Board</h1>
             <div className={styles.avatarContainer} onClick={toggleMenu}>
                 <img
-                    src="https://via.placeholder.com/40" // Заглушка для аватара
+                    src="https://avatars.mds.yandex.net/i?id=91892a34e5229181f6a458b4befb7c887afda87e-5232014-images-thumbs&n=13" // Заглушка для аватара
                     alt="User avatar"
                     className={styles.avatar}
                 />

@@ -1,0 +1,40 @@
+.textarea{
+
+    background-color: white;
+    width: 95%;
+    height: 380px;
+    margin-left:30px;
+    margin-right:30px;
+    resize: none;
+}
+.saveButton{
+
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left:20px;
+}
+.backLink{
+
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 36px;
+    margin-left:20px;
+    text-decoration: none;
+    position:  absolute;
+    right: 40px;
+    top:170px;
+}
+.title{
+
+    color: white;
+    margin-left:30px;
+}
